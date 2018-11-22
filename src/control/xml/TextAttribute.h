@@ -13,13 +13,10 @@
 
 #include "Attribute.h"
 
-#include <string>
-using std::string;
-
 class TextAttribute : public XMLAttribute
 {
 public:
-	TextAttribute(string name, string value);
+	TextAttribute(const char* name, const char* value);
 	virtual ~TextAttribute();
 
 public:
@@ -28,5 +25,5 @@ public:
 private:
 	XOJ_TYPE_ATTRIB;
 
-	string value;
+	char* value;
 };

@@ -351,8 +351,6 @@ void SaveHandler::visitPage(XmlNode* root, PageRef p, Document* doc, int id)
 void SaveHandler::saveTo(OutputStream* out, path filename, ProgressListener* listener)
 {
 	XOJ_CHECK_TYPE(SaveHandler);
-	// TODO Debug
-	listener = NULL;
 
 	char* old_locale, *saved_locale;
 

@@ -14,23 +14,20 @@
 #include <OutputStream.h>
 #include <XournalType.h>
 
-#include <string>
-using std::string;
-
 class XMLAttribute
 {
 public:
-	XMLAttribute(string name);
+	XMLAttribute(const char* name);
 	virtual ~XMLAttribute();
 
 public:
 	virtual void writeOut(OutputStream* out) = 0;
 
-	string getName();
+	const char* getName();
 
 private:
 	XOJ_TYPE_ATTRIB;
 
 
-	string name;
+	char* name;
 };
